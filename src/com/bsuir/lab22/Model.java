@@ -15,7 +15,7 @@ public class Model {
     
     private Shop shop = new Shop();
     private Customer customer  = new Customer(50);
-    private Card card = new Card();
+    private Cart cart = new Cart();
     
     public Set<Product> getProducts() {
     	return shop.getProducts();
@@ -29,12 +29,12 @@ public class Model {
     	return customer.getHolded();
     }  
     
-    public void cardStoreProduct() {
-    	card.storeProduct(customer.getHolded());
+    public void cartStoreProduct() {
+    	customer.putIntoCart(cart);
     }
     
-    public Product cardStored() {
-    	return card.getStored();
+    public Product cartStored() {
+    	return cart.getStored();
     }  
     
     public int shopAskForMoney() {

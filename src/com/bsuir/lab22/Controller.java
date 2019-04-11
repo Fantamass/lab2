@@ -38,7 +38,7 @@ public class Controller {
     public void buyButtonPressed() {
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("Покупка");
-    	if(Model.getInstance().cardStored() != null) {
+    	if(Model.getInstance().cartStored() != null) {
     		int price = Model.getInstance().shopAskForMoney();
     		if(price > 0)
     			alert.setHeaderText("Списано " + String.valueOf(price) + " рублей");
@@ -59,7 +59,7 @@ public class Controller {
     }
     
     public void putButtonPressed() {
-    	Model.getInstance().cardStoreProduct();
+    	Model.getInstance().cartStoreProduct();
     	view.getLabels().get(Strings.LABEL_CARD_STORED).setText(Model.getInstance().getHolded().toString());
     }    
 }

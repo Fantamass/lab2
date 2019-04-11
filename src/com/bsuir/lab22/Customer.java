@@ -18,6 +18,10 @@ public class Customer {
 		return holdedProduct;
 	}
 	
+	public void putIntoCart(Cart cart) {
+		cart.storeProduct(holdedProduct);
+	}
+	
 	public int pay() {
 		if(money >= 10) {
 			money = money - 10;
